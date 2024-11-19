@@ -6,11 +6,10 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:46:22 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/15 14:45:57 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:45:12 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "libftprintf.h"
 #include <stdio.h>
 
@@ -30,8 +29,8 @@ int	ft_args_is_valid(const char *format, va_list args)
 		len_print += ft_printnbr(va_arg(args, int));
 	// else if (*format == 'u')
 	// 	len_print += ft_print_unsigned(va_arg(args, unsigned int));
-	// else if (*format == 'x' || format == 'X')
-	// 	len_print += ft_print_hex(va_arg(args, unsigned int), format);
+	else if (*format == 'x' || format == 'X')
+		len_print += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (*format == '%')
 	{
 		write(1, "%",1);

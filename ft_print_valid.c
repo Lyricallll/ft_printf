@@ -6,26 +6,16 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:53:12 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/15 14:44:51 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/19 11:43:49 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include "libft/libft.h"
 
 int	ft_putchar(int c)
 {
 	write(1, &c, 1);
 	return (1);
-}
-
-void	ft_putstr(char *str)
-{
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
 }
 
 int	ft_printstr(char *str)
@@ -35,7 +25,7 @@ int	ft_printstr(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		ft_putstr("(null)");
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (str[i])
