@@ -6,7 +6,7 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:53:12 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/19 11:43:49 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/20 08:29:45 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,26 @@ int	ft_putchar(int c)
 
 int	ft_printstr(char *str)
 {
-	int	i;
+	size_t	len;
 
-	i = 0;
+	len = 0;
 	if (str == NULL)
 	{
 		write(1, "(null)", 6);
 		return (6);
 	}
-	while (str[i])
+	while (str[len])
 	{
-		write(1, &str[i], 1);
-		i++;
+		write(1, &str[len], 1);
+		len++;
 	}
-	return (i);
+	return (len);
 }
 
 int	ft_printnbr(int n)
 {
-	int		len;
-	char	*num;
+	size_t		len;
+	char		*num;
 
 	len = 0;
 	num = ft_itoa(n);
