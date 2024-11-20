@@ -6,7 +6,7 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:46:22 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/20 12:33:07 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:31:25 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,6 @@ int	main(void)
 	printf("VRAI FONCTION = %x\n",987532154);
 	ft_printf("  MA FONCTION = %x\n",987532154);
 	printf("---------------------------------------\n");
-	printf("VRAI FONCTION = %X\n",987532154);
-	ft_printf("  MA FONCTION = %X\n",987532154);
+	// printf("VRAI FONCTION = %X\n",987532154);
+	// ft_printf("  MA FONCTION = %X\n",987532154);
 }
