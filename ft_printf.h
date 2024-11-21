@@ -6,7 +6,7 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:19:46 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/21 15:14:18 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:00:39 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <unistd.h>
 
 int		ft_printstr(char *str);
-int		ft_args_is_valid(const char *format, va_list args);
 int		ft_printf(const char *format, ...);
 int		ft_printnbr(int n);
 int		ft_putchar(int c);

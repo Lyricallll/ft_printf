@@ -6,13 +6,13 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:39:52 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/21 15:35:40 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:19:28 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_hex(unsigned int args, const char *format) 
+int	ft_print_hex(unsigned int args, const char *format)
 {
 	char			*hex_lowercase;
 	char			*hex_uppercase;

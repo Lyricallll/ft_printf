@@ -6,7 +6,7 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:46:22 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/21 16:14:30 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:29:46 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_check(const char *format)
 	return (0);
 }
 
-int	ft_args_is_valid(const char *format, va_list args)
+static int	ft_args_is_valid(const char *format, va_list args)
 {
 	size_t	len_print;
 
@@ -39,6 +39,8 @@ int	ft_args_is_valid(const char *format, va_list args)
 		len_print += ft_printstr(va_arg(args, char *));
 	else if (*format == 'd' || *format == 'i')
 		len_print += ft_printnbr(va_arg(args, unsigned int));
+	else if (*format == 'x' || *format == 'X')
+		len_print += ft_print_hex(va_arg(args, unsigned int), format);
 	else if (*format == '%')
 	{
 		write(1, "%", 1);
@@ -76,13 +78,8 @@ int	ft_printf(const char *format, ...)
 
 int	main(void)
 {
-	// char	*str = NULL;
-
-	// printf("---------------------------------------\n");	
-	// printf("Value: %d\n",printf("VRAI FONCTION = %d\n",42));
-	// ft_printf("Ma value: %d\n",ft_printf("  MA FONCTION = %d\n",42));
-	// printf("---------------------------------------\n");
-	printf("Value: %d\n",printf(0));
 	printf("---------------------------------------\n");
-	ft_printf("Ma value: %d\n",ft_printf(0));
+	printf("Value: %d\n",printf("VRAI FONCTION = %x\n",4242));
+	ft_printf("Ma value: %d\n",ft_printf("  MA FONCTION = %x\n",4242));
+	printf("---------------------------------------\n");
 }
