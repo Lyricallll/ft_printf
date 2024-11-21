@@ -6,12 +6,13 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:46:22 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/21 21:29:46 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:57:01 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
+#include <limits.h>
 
 static int	ft_check(const char *format)
 {
@@ -76,10 +77,10 @@ int	ft_printf(const char *format, ...)
 	return (total_printed);
 }
 
-int	main(void)
-{
-	printf("---------------------------------------\n");
-	printf("Value: %d\n",printf("VRAI FONCTION = %x\n",4242));
-	ft_printf("Ma value: %d\n",ft_printf("  MA FONCTION = %x\n",4242));
-	printf("---------------------------------------\n");
-}
+// int	main(void)
+// {
+// 	printf("---------------------------------------\n");
+// 	printf("Value: %d\n",printf("VRAI FONCTION = %x\n",0));
+// 	ft_printf("Ma value: %d\n",ft_printf("  MA FONCTION = %x\n",0));
+// 	printf("---------------------------------------\n");
+// }

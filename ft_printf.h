@@ -6,7 +6,7 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:19:46 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/21 21:00:39 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/21 21:34:13 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <stdlib.h>
+# include <stdio.h>
 # include <unistd.h>
 
 int		ft_printstr(char *str);
