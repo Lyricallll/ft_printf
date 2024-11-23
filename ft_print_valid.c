@@ -6,13 +6,13 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:53:12 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/23 09:14:51 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/23 22:50:04 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c) 
+int	ft_putchar(int c)
 {
 	write(1, &c, 1);
 	return (1);
@@ -45,5 +45,16 @@ int	ft_printnbr(int n)
 	num = ft_itoa(n);
 	len = ft_printstr(num);
 	free(num);
+	return (len);
+}
+
+int	ft_putnbr(unsigned int u)
+{
+	size_t	len;
+
+	len = 0;
+	if (u > 9)
+		len += ft_putnbr(u / 10);
+	len += ft_putchar(u % 10 + '0');
 	return (len);
 }

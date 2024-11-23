@@ -6,7 +6,7 @@
 #    By: agraille <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/21 10:28:37 by agraille          #+#    #+#              #
-#    Updated: 2024/11/21 21:45:51 by agraille         ###   ########.fr        #
+#    Updated: 2024/11/23 23:11:13 by agraille         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ HEADER = ft_printf.h
 SRC =./ft_printf.c\
 	./ft_itoa.c\
 	./ft_print_valid.c\
-	./ft_print_hexa.c
+	./ft_print_hexa.c\
+	./ft_print_ptr.c
 
 OBJ = $(SRC:.c=.o)
 NAME = libftprintf.a

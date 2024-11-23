@@ -6,13 +6,12 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 08:46:22 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/21 21:57:01 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/23 23:27:50 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdio.h>
-#include <limits.h>
 
 static int	ft_check(const char *format)
 {
@@ -42,6 +41,10 @@ static int	ft_args_is_valid(const char *format, va_list args)
 		len_print += ft_printnbr(va_arg(args, unsigned int));
 	else if (*format == 'x' || *format == 'X')
 		len_print += ft_print_hex(va_arg(args, unsigned int), format);
+	else if (*format == 'u')
+		len_print += ft_putnbr(va_arg(args, unsigned int));
+	else if (*format == 'p')
+		len_print += ft_print_ptr(va_arg(args, unsigned long int));
 	else if (*format == '%')
 	{
 		write(1, "%", 1);
@@ -76,11 +79,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (total_printed);
 }
-
-// int	main(void)
-// {
-// 	printf("---------------------------------------\n");
-// 	printf("Value: %d\n",printf("VRAI FONCTION = %x\n",0));
-// 	ft_printf("Ma value: %d\n",ft_printf("  MA FONCTION = %x\n",0));
-// 	printf("---------------------------------------\n");
-// }
