@@ -6,13 +6,13 @@
 /*   By: agraille <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:53:12 by agraille          #+#    #+#             */
-/*   Updated: 2024/11/21 21:51:28 by agraille         ###   ########.fr       */
+/*   Updated: 2024/11/23 09:14:51 by agraille         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
+int	ft_putchar(int c) 
 {
 	write(1, &c, 1);
 	return (1);
